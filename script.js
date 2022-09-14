@@ -1,3 +1,10 @@
+// prevent space bar from scrolling page
+window.addEventListener('keydown', function(e) {
+  if(e.keyCode == 32 && e.target == document.body) {
+    e.preventDefault();
+  }
+});
+
 const display = document.getElementById("display");
 const question = document.getElementById("question");
 const startBtn = document.getElementById("starts");
@@ -70,6 +77,9 @@ const gameOver = () => {
   const finishTime = new Date().getTime();
   const timeTaken = Math.round((finishTime - startTime) / 1000);
 
+  // Calculate wordPerMinute (WPM)
+  const wordPerMinute = Math.round(userText.length / 5 / (timeTaken/60));
+
   // show result modal
   resultModal.innerHTML = "";
 
@@ -83,11 +93,12 @@ const gameOver = () => {
   resultModal.innerHTML += `
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
+    <p>Your typing speed: <span class="bold">${wordPerMinute}</span> wpm</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
 
-  addHistory(questionText, timeTaken, errorCount);
+  addHistory(questionText, timeTaken, wordPerMinute, errorCount);
 
   // restart everything
   startTime = null;
