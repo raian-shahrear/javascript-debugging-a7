@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Blog</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,14 +15,14 @@
       rel="stylesheet"
     />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    
   </head>
 <body>
   <header>
     <nav>
       <h1 class="title">
         <img src="./logo.png" />
-        <ul class="nav-items">
+        <ul class="bar-items fw-bold">
           <li><a href="./index.html" class="link-inactive">HOME</a></li>
           <li><a href="./blog.html" class="link-active">BLOG</a></li>
         </ul>
@@ -115,7 +117,15 @@
         </h2>
         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            <p class="m-0">JavaScript has a runtime model based on an <strong>event loop</strong>, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks.</p>
+            <p class="m-0">The <strong>Event Loop</strong> occurs on JavaScript’s asynchronous programming which makes possible for JS to operate in multi-threads by following some steps:</p>
+            <ul>
+              <li><strong>Heap:</strong> Objects are allocated in a 'heap' which is just a name to donate a large region of memory.</li>
+              <li><strong>Stack:</strong>Keep track of all the operations in line to executed. Whenever a function is ended, it pops from the 'stack'. It follows Last In First Out method.</li>
+              <li><strong>Browser API:</strong> Hold or Store Asynchronous functions for an interval or a specific delay time which is set by <code>setTimeout</code> or <code>setInterval</code>.</li>
+              <li><strong>Call Back Queue:</strong> When the interval is finished the function comes from 'browser API' to 'queue' where data will be waited until the 'stack' is empty means there is no synchronous data left.</li>
+              <li><strong>Event Loop:</strong> help the function or data to pass to the 'stack' from 'queue' when it is fully empty. All Asynchronous data passes to the 'stack' through looping.</li>
+            </ul>
           </div>
         </div>
       </div>

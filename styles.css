@@ -117,7 +117,7 @@ nav{
   justify-content: space-between;
   align-items: center;
 }
-.nav-items{
+.bar-items{
   font-size: 16px; 
   display: flex;
   justify-content: end;
@@ -125,7 +125,7 @@ nav{
   gap: 20px;
   list-style-type: none;
 }
-.nav-items li a{
+.bar-items li a{
   text-decoration: none; 
 }
 .link-active{
