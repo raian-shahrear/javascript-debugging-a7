@@ -128,6 +128,9 @@ nav{
 .bar-items li a{
   text-decoration: none; 
 }
+.bar-items li a:hover{
+  color: lightskyblue;
+}
 .link-active{
   color: #9dffad;
 }
@@ -225,6 +228,9 @@ button {
   nav{
     width: 90%;
     margin: 0 auto;
+  }
+  .bar-items{
+    gap: 10px;
   }
 }
 

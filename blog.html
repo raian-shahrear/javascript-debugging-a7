@@ -22,7 +22,7 @@
     <nav>
       <h1 class="title">
         <img src="./logo.png" />
-        <ul class="bar-items fw-bold">
+        <ul class="bar-items fw-bold mb-0">
           <li><a href="./index.html" class="link-inactive">HOME</a></li>
           <li><a href="./blog.html" class="link-active">BLOG</a></li>
         </ul>
@@ -63,7 +63,7 @@
                 <tr>
                   <td class="fw-bold">3</td>
                   <td>Data storage is remained permanently even if browser is closed</td>
-                  <td>Data is saved temporarily and cleared if the browser (or tab) is closed.</td>
+                  <td>Data is saved temporarily and cleared if the browser (or tab) is closed</td>
                 </tr>
               </tbody>
             </table>
@@ -90,7 +90,7 @@
               <tbody>
                 <tr>
                   <td class="fw-bold">1</td>
-                  <td>Variable declared inside block or curly braces {}</td>
+                  <td>Variable declared inside block or curly braces { }</td>
                   <td>Variable declared globally have global scope</td>
                 </tr>
                 <tr>
@@ -102,6 +102,15 @@
                   <td class="fw-bold">3</td>
                   <td>Variable declared with <code>var</code> is hoisting to the top of the current scope and can be accessed from anywhere, whereas, <code>let</code> and <code>const</code> are behaved as block scope</td>
                   <td>Variable declared with <code>var</code>, <code>let</code> and <code>const</code> are quite similar when declared outside a block</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">4</td>
+                  <td>
+                    <p class="m-0"><code>for(let i = 0; 5 > i; i++){</code></p>
+                    <p class="m-0"><code>console.log(i);</code> // i, only available inside this scope</p>
+                    <p class="m-0"><code>}</code></p>
+                  </td>
+                  <td><code>let i = 35;</code> // i, available from globally</td>
                 </tr>
               </tbody>
             </table>
@@ -144,11 +153,11 @@
               <li>Variable that is not initialized.</li>
               <li>Function with no return will be undefined.</li>
               <li>Function parameter that is not passed will be undefined.</li>
-              <li>in a function, if return has nothing on the right side will return undefined.</li>
+              <li>In a function, if <code>return</code> has nothing on the right side will return undefined.</li>
               <li>Property that doesn't exist on a object.</li>
               <li>Accessing array elements outside of the index range.</li>
               <li>Deleting an element inside an array using <code>delete</code>.</li>
-              <li>set a value directly to Undefined.</li>
+              <li>set a value directly to <code>Undefined</code>.</li>
             </ol>
           </div>
         </div>
